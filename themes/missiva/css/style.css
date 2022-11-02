@@ -171,9 +171,14 @@ body {
     background-color: paleturquoise;
 }
 
-.main {
-}
-
 .footer, .header {
     background-color: cadetblue;
 }
+
+p {
+    padding-bottom: 0.6em;
+}
+
+/* .img-small {
+    max-width: 400px;
+} */
