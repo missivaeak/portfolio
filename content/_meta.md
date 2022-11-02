@@ -1,8 +1,8 @@
 ---
-Logo: image/me.jpg?w=300
+Logo: image/bee.png?w=150
 Tagline: Min portfolio
 Social:
-    - title: Link till sidans github repo.
-      url: https://github.com/dbwebb-se/design-v3
+    - title: Länk sidans github repo.
+      url: https://github.com/missivaeak/portfolio
       icon: github
 ---

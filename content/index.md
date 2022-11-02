@@ -6,4 +6,6 @@ Description: Detta är startsidan.
 Hem
 ==========================
 
-Laser är coolt. Det är likriktat och synkroniserat ljus.
+Jag heter Adam. Jag gillar barn och trams. Det är kul att göra hemsidor.
+
+![Tecknad bild på mig](image/me.jpg)
