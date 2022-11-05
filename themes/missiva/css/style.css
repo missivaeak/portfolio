@@ -21,6 +21,7 @@ html, body {
 
 :root {
     --main-width: 800px;
+    --half-width: 400px;
 }
 
 body {
@@ -32,6 +33,7 @@ body {
     flex: 1 0 auto;
     margin: 10px auto;
     width: var(--main-width);
+    overflow: hidden;
 }
 
 .header, .footer {
@@ -46,13 +48,18 @@ body {
 }
 
 .nav, .site-header {
-    width: calc(var(--main-width) / 2);
+    width: var(--half-width);
 }
 
 /* Title */
 
 .title, .logo {
-    padding: 1em 3em 1em 0;
+    padding: 16px 48px 16px 0;
+}
+
+.logo {
+    font-size: 100px;
+    color:rgb(0, 82, 82)
 }
 
 @media (max-width: 767px) {
@@ -75,16 +82,22 @@ body {
     font-style: italic;
 }
 
+.site-header {
+    justify-content: left;
+}
+
 /* Footer */
 
 .footer {
     display: flex;
     justify-content: center;
     border-top: 1px solid #222;
+    padding: 0.5em;
 }
 
 .footer a {
     color: #222;
+    text-decoration: none;
 }
 
 .footer .social {
@@ -92,7 +105,7 @@ body {
 }
 
 .footer > div {
-    width: calc(var(--main-width) / 2);
+    width: var(--half-width);
 }
 
 .social {
@@ -102,7 +115,7 @@ body {
 /* Typografy */
 
 body {
-    font-family: sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5rem;
     color: #444;
 }
@@ -179,6 +192,22 @@ p {
     padding-bottom: 0.6em;
 }
 
-/* .img-small {
-    max-width: 400px;
+/* .nav li:first-child, .nav li:last-child {
+    background-color: rgb(1, 114, 114);
 } */
+
+.nav li.active {
+    background-color: rgb(1, 114, 114)
+}
+
+.nav li.active a {
+    color: #8fbcb4;
+}
+
+.nav li:hover {
+    background-color: rgb(169, 253, 253);
+}
+
+.nav li:hover a {
+    color: unset;
+}
