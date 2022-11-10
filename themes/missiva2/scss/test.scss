@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Old+Standard+TT:ital@1&family=Poppins&display=swap');
+@mixin font-sizer {
+    font-size: smaller;
+    font-weight: 300;
+}
+
+.old-fashioned {
+    @include font-sizer;
+    font-family: 'Old Standard TT', serif;
+    letter-spacing: -1px;
+}
+
+.modern {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.4rem;
+    margin: 1em 1.4em;
+}
+
+.worst-ever {
+    font-family: 'Gloria Hallelujah', cursive;
+    letter-spacing: 6px;
+    text-align: justify;
+    background: #fff;
+    color:#0ff;
+    line-height: 1em;
+}

@@ -1,13 +1,139 @@
+@use 'sass:math';
 @import '../../node_modules/normalize.css/normalize';
+
 @import 'variables';
 
 @import 'blockquote';
 @import 'code';
+@import 'layout';
+@import 'mobile-menu';
+
+@import '../../shared/fontawesome/scss/fontawesome';
+$fa-font-path: '../../shared/fontawesome/webfonts';
+@import '../../shared/fontawesome/scss/brands';
+@import '../../shared/fontawesome/scss/solid';
+@import '../../shared/fontawesome/scss/regular';
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans&display=swap');
+
+@import 'test';
+
+/* body styling */
 
 body {
-    background-color: $background-color;
+    background-color: $theme-colour;
+}
+
+.header-left,
+.header,
+.header-right,
+.footer-left,
+.footer,
+.footer-right {
+    background-color: $theme-colour-d;
 }
 
 * {
     color: $font-color;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Nunito', sans-serif;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    line-height: $base-line-height;
+}
+
+p {
+    font-size: $base-font-size;
+    margin-bottom: $magic-number;
+}
+
+@media (min-width: 64em) {
+    html {
+        font-size: 112.5%;
+    }
+}
+
+/* header and footer styling */
+
+.header {
+    * {
+        color: #000;
+    }
+}
+
+.logo {
+    font-size: 5rem;
+    padding: 0 2rem 0 1rem;
+    width: 5rem;
+    text-align: center;
+}
+
+.footer {
+    color: #000;
+
+    a {
+        text-decoration: none;
+    }
+
+    * {
+        margin: auto 0;
+    }
+}
+
+.social {
+    font-size: $base-font-size * 2;
+}
+
+/* navigation bar styling */
+
+.nav {
+    a:hover,
+    ul *:hover {
+        background-color: $theme-colour-l;
+        // color: $theme-colour;
+    }
+
+    a {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        margin: 0.2rem;
+    }
+
+    .active {
+        background-color: $theme-colour;
+    }
+}
+
+/* content styling */
+
+hr {
+    width: math.percentage(math.div(3, 4));
+    // border: none;
+    // border-top: 1px solid $accent-colour;
+    height: 2px;
+    border-width: 0;
+    // color: black;
+    background-color: #000;
+    margin-bottom: $magic-number;
+}
+
+/* table styling */
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: $magic-number;
 }

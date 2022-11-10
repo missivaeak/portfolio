@@ -9,7 +9,9 @@
   "scripts": {
     "lint": "stylelint \"**/*.scss\"",
     "style": "sass missiva2/scss/style.scss missiva2/css/style.css --no-source-map",
-    "style-min": "sass missiva2/scss/style.scss missiva2/css/style.min.css --no-source-map --style compressed"
+    "style-min": "sass missiva2/scss/style.scss missiva2/css/style.min.css --no-source-map --style compressed",
+    "watch": "sass missiva2/scss/style.scss missiva2/css/style.css --no-source-map --watch",
+    "watch-min": "sass missiva2/scss/style.scss missiva2/css/style.min.css --no-source-map --style compressed --watch"
   },
   "keywords": [],
   "author": "",

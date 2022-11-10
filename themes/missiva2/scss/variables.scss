@@ -1,5 +1,14 @@
-$font-color: #000;
-$font-alternative-color: #fff;
-$accent-color: #ee6c4d;
-$background-color: #3d5a80;
-$background-alternative-color: #e0fbfc;
+$font-color: #474747;
+$font-alternative-color: #ddd;
+$theme-colour: #0bd4d4;
+$theme-colour-l: #26ffff;
+$theme-colour-d: #038787;
+$accent-colour: #d4550b;
+$accent-colour-d: #873200;
+
+$main-width: 960px;
+$main-width-min: 480px;
+
+$base-line-height: 1.4;
+$base-font-size: 1.1em;
+$magic-number: $base-line-height * $base-font-size;

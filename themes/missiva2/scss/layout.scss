@@ -1,0 +1,77 @@
+/* main layout, centered grid */
+
+.grid {
+    display: grid;
+}
+
+.wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    grid-template-columns: auto minmax($main-width-min, $main-width) auto;
+    grid-template-rows: min-content auto min-content;
+}
+
+.header-left,
+.main-left,
+.footer-left {
+    grid-column: 1 / 1;
+}
+
+.header,
+.main,
+.footer {
+    grid-column: 2 / 2;
+}
+
+.header-right,
+.main-right,
+.footer-right {
+    grid-column: 3 / 3;
+}
+
+.header-left,
+.header,
+.header-right {
+    grid-row: 1 / 1;
+}
+
+.main-left,
+.main,
+.main-right {
+    grid-row: 2 / 2;
+}
+
+.footer-left,
+.footer,
+.footer-right {
+    grid-row: 3 / 3;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main {
+    overflow-x: hidden;
+}

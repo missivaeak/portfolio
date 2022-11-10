@@ -27,7 +27,7 @@ function main()
     }
 
     // responsive menu
-    var menu = document.getElementById('nav'),
+    var menu = document.getElementsByClassName('nav')[0],
         menuToggle = document.getElementById('nav-toggle'),
         navIcon = document.getElementById('toggler')
         toggleMenuEvent = function (event) {
@@ -56,12 +56,12 @@ function main()
         },
         onResizeEvent = function () {
             if (utils.isElementVisible(menuToggle)) {
-                menu.className = 'hidden';
+                menu.className = 'nav hidden';
                 navIcon.className = 'fa fa-bars';
                 menuToggle.addEventListener('click', toggleMenuEvent);
                 menuToggle.addEventListener('keydown', toggleMenuEvent);
             } else {
-                menu.className = '';
+                menu.className = 'nav';
                 navIcon.className = 'fa fa-times';
                 menu.removeAttribute('data-slide-id');
                 menuToggle.removeEventListener('click', toggleMenuEvent);

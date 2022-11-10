@@ -1,7 +1,8 @@
 ---
 Title: Docs
 Description: Documentation that came with Pico.
-# hidden: true
+hidden: true
+icon: fa fa-file-alt
 ---
 
 ## Welcome to Pico

@@ -1,13 +1,26 @@
 {% include 'incl/header.twig' %}
 
 <body>
-    {% include 'incl/nav.twig' %}
+    <div class="grid wrapper">
+        <div class="header-left"></div>
+        <div class="header" role="banner">
+            {% include 'incl/nav.twig' %}
+        </div>
+        <div class="header-right"></div>
 
-    <div class="main" role="main">
-        {{ content }}
+        <div class="main-left">
+        </div>
+        <div class="main" role="main">
+            {{ content }}
+        </div>
+        <div class="main-right"></div>
+        
+        <div class="footer-left"></div>
+        <div class="footer">
+            {% include 'incl/footer.twig' %}
+        </div>
+        <div class="footer-right"></div>
     </div>
-    
-    {% include 'incl/footer.twig' %}
 </body>
 
 </html>
