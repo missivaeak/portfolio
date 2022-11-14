@@ -426,7 +426,6 @@ pre code {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "header header header";
-  grid-auto-flow: dense;
   gap: 1.54em;
 }
 
@@ -6792,10 +6791,6 @@ hr {
 /* content styling */
 .content-small {
   text-align: justify;
-}
-
-.blue-text {
-  color: #00f;
 }
 
 /* table styling */

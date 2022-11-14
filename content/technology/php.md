@@ -18,19 +18,18 @@ icon: far fa-file-code
 </div>
 
 <div class="content-small" markdown="1">
-# php
+# PHP
 
-Php står för *PHP: Hypertext Preprocessor* och har som huvudsakliga uppgift att utföra förarbete på HTML-sidor, det är det namnet avser. HTML-kod i sig är statisk i den meningen att det som står i koden är det som användaren ser och för att användaren ska se något annat så måste HTML-koden ändras.
+PHP är ett populärt skriptspråk som främst används för att skapa webbplatser med dynamiskt innehåll. PHP är det mest använda server-side programmeringsspråk på webben med uppåt 80% av alla webbplatser som använder det.
 
-Ett kodstycke som säger:
+PHP är ett objekt-orienterad programmeringsspråk, som med senare versioner kan vara hård typat och till och med JIT.
 
-    <p>Dagens datum är 2022-11-14</p>
+Ett program som skriver ut alla jämna siffror mellan 1 och 100 kan se ut på följande sätt i JavaScript:
 
-kommer ju bara vara sant en dag om året. Men med php-kod kan vi skriva så här istället:
+<pre><code class="language-php">&lt;?php for ($i = 1; $i &lt;= 100; $i++) {
+    if (!($i % 2)) {
+        print($i);
+    }
+}</code></pre>
 
-    echo '<p>Dagens datum är ' . date('o-m-d') . '</p>';
-
-och då skrivs dagens datum ut vid den punkt som sidan öppnas. Om det sen går över midnatt så ändras inte datumet av sig självt utan användaren behöver ladda om sidan för att se det datumet.
-
-Vad som menas med att det är en preprocessor är webbservern kör php-koden innan den hämtas av användarens dator och det som hämtas är enbart HTML-kod, alltså ser det alltid ut som det första kodexemplet. Användarens dator kan inte se php-koden.
 </div>

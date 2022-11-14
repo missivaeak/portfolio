@@ -20,4 +20,6 @@ icon: far fa-file-code
 <div class="content-small" markdown="1">
 # SQLite
 
-SQLite är en databasmotor, den hjälper en webbserver att spara undan saker. Det kan användas till många olika saker - spara artiklar till en webbtidning, komma ihåg något åt dig till nästa gång du besöker sidan eller låta användare skapa en inloggning på sidan.
+SQLite är en filbaserad databas som använder sig av frågespråket Structured Query Language (SQL). Datatyper som man kan använda sig av är begränsade i förhållande till exempelvis MySQL eller PostGreSQL.
+
+</div>

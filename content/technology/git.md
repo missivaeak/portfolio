@@ -20,6 +20,9 @@ icon: far fa-file-code
 <div class="content-small" markdown="1">
 # git
 
-Git är ett versionshanteringssystem. Det betyder att man kan göra ändringar i sin projekt och sedan spara undan dem i enskilda versionen. Om något sen går fel så kan man gå tillbaka till en tidigare, fungerande version eller bara blicka tillbaka och se vilka ändringar man har gjort, för att felsöka.
+Git är ett distribuerat versionshanteringssystem som skapades 2005 av Linus Torvalds. Git skapades för att hantera ändringar för Linux-kärnan.
 
-Git går också att använda tillsammans med onlinetjänster som GitHub för att dela sin git med andra personer och då fungerar det även som en gemensam arbetsplatform där många utvecklare kan arbeta tillsammans med samma kod.
+Att Git är ett distribuerat system innebär att inget centralt arkiv behövs. Ett centralt arkiv behövs dock om flera utvecklare vill samarbeta om samma kod.
+
+Git är tradionellt sett ett CLI verktyg, men en del GUI baserade verktyg har utvecklats för att underlätta tröskeln att börja med Git.
+</div>

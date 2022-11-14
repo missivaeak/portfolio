@@ -20,6 +20,12 @@ icon: far fa-file-code
 <div class="content-small" markdown="1">
 # HTML
 
-Förkortningen HTML står för *HyperText Markup Language*. Att det är ett markup-språk betyder att det går att införa markup-syntax som beskriver hur en text bör visas. Det kan t.ex. handla om att göra ett ord till en rubrik eller att lägga till en bild i ett dokument. HTML:s huvudsakliga användning är på webbsidor och det är användarens webbläsare som tolkar HTML-koden och visar det på sitt förändrade vis.
+HyperText Markup Language (HTML) utgör tillsammans med HyperText Transfer Protocol (HTTP) grunden i webben. Webbsidor skrivs i HTML och skickas sedan över internet med hjälp av HTTP.
 
-Om du högerklickar på denna sida och hittar ett menyval som lyder *visa källa* eller något liknande så kan du se sidans HTML-kod. Det överensstämmer med innehållet på denna sida fast med många &lt; och &gt; som är syntaxen för HTML-element.
+HTML beskriver innehåll och struktur för våra webbplatser och gör det möjligt att ladda andra dokument till exempel CSS eller JavaScript filer.
+
+HTML använder sig av element beskrivna av taggar. Nedan är ett exempel på ett textstycke med en länk i:
+
+<pre><code class="language-html">&lt;p&gt;En länk till min &lt;a href="minwebbplats.html"&gt;webbplats&lt;/a&gt;&lt;/p&gt;</code></pre>
+
+</div>

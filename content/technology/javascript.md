@@ -20,8 +20,16 @@ icon: far fa-file-code
 <div class="content-small" markdown="1">
 # JavaScript
 
-JavaScript är ett programmeringsspråk som framför allt används tillsammans med hemsidor. Även om JavaScript kan köras som enskilda script i en interpretator likt Python så är det framförallt användbart då man kan ladda in script som körs på hemsidor och då manipulerar JavaScriptet HTML och CSS på sidan direkt och dynamiskt.
+JavaScript är ett prototyp-baserat skriptspråk. JavaScript utgör tillsammans med HTML och CSS grunden för webben. JavaScript är dynamiskt, svagt typat och hanterar funktioner som första-klass-objekt.
 
-Även om det kanske inte är det enklaste eller mest lämpliga alternativet så kan JavaScript göra nästan vad som helst. Det går att göra spel, ordbehandlare, bildredigerare, meddelandetjänster bland annat. De där jobbiga förfrågningarna om att ge bort dina personuppgifter som finns på alla sidor numer? Det är antagligen JavaScript.
+JavaScript använder sig av C-like syntax, men har annars inget gemensamt med programmeringsspråket Java.
 
-JavaScript är en sorts ECMAScript, det är en samling med scriptspråk som alla har de här egenskaperna som JavaScript har. ECMAScript är vad standarden för språken kallas, så att de alla kan interagera med hemsidor på samma vis utan att det blir fel.
+Ett program som skriver ut alla jämna siffror mellan 1 och 100 kan se ut på följande sätt i JavaScript:
+
+<pre><code class="language-javascript">for (let i = 1; i &lt;= 100; i++) {
+    if (!(i % 2)) {
+        console.log(i);
+    }
+}</code></pre>
+
+</div>
