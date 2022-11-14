@@ -10,7 +10,7 @@ icon: far fa-file-code
 
 [CSS](css)  
 [HTML](html)  
-[Javascript](javascript)  
+[JavaScript](javascript)  
 [SQLite](sqlite)  
 [Python](python)  
 [git](git)  
@@ -24,27 +24,21 @@ CSS står för Cascading Style Sheets och är det huvudsakliga sättet för webu
 
 I sin enkelhet så kan en regel se ut så här
 
-```
-.blue-text {
-    color: blue;
-}
-```
+    .blue-text {
+        color: blue;
+    }
 
 och när vi sedan skriver ut HTML på detta vis
 
-```
-<span class="blue-text">detta är blått</span>
-```
+    <span class="blue-text">detta är blått</span>
 
 så blir resultatet <span class="blue-text">detta är blått</span>.
 
 Enkelt, tänker du? Ja, och nej. Det blir lite krångligare när man vet att det redan finns en regel på sidan som säger att den här texten ska vara mörkgrå:
 
-```
-* {
-    color: #474747;
-}
-```
+    * {
+        color: #474747;
+    }
 
 `*` i detta kodstycke betyder ungefär *allt*. `#474747` är kod för den mörkgråa färg som sidans text har som standard. 
 

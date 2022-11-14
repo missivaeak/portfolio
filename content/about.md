@@ -20,10 +20,9 @@ Verktygen som genererar sidans stil är Sass, tillsammans med normalize.css. Sas
 
 På sidan används på typsnitt från Google Fonts; Nunito och Open Sans, ikonerna kommer från Font Awesome. Sidans dynamiska funktioner kommer från JavaScript.
 
----
 
 | Sidstruktur | Stil | Övriga teknologier |
-| --- | --- | --- |
+| :---: | :---: | :---: |
 | [Pico][1] | [Sass][5] | [Google Fonts][7] |
 | [Twig][2] | [normalize.css][6]| [Font Awesome][8] |
 | [php][3] | [CSS][10] | [JavaScript][9] |

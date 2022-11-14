@@ -361,6 +361,7 @@ pre code {
 .main {
   grid-row: 2/2;
   grid-column: 2/2;
+  margin-bottom: 1.54em;
 }
 
 .footer {
@@ -427,7 +428,6 @@ pre code {
   grid-template-areas: "header header header";
   grid-auto-flow: dense;
   gap: 1.54em;
-  margin-bottom: 1.54em;
 }
 
 .landingpage .landingpage-header {
@@ -6683,6 +6683,7 @@ h6 {
 
 html {
   font-size: 100%;
+  overflow-y: scroll;
 }
 
 body {
@@ -6753,7 +6754,6 @@ hr {
 .nav a {
   padding: 0.462rem 0.924rem;
   border-radius: 0.7rem;
-  border: 2px solid rgba(0, 0, 0, 0);
   text-decoration: none;
 }
 .nav a:hover {
@@ -6764,14 +6764,12 @@ hr {
 }
 .nav a:hover,
 .nav .active {
-  border: 2px solid #555;
+  outline: 2px solid #555;
   box-shadow: 1px 1px 3px #333;
 }
 
 /* sidebar styling */
 .sidebar {
-  place-self: start;
-  margin-top: 1.54rem;
   border: solid 2px #8f4c19;
   border-radius: 1.54em;
   padding-left: 1.54em;
@@ -6780,6 +6778,8 @@ hr {
   padding-bottom: 1.386em;
   box-shadow: 2px 2px 5px #333;
   background: linear-gradient(to bottom, #ba6321 4.158em, #db7c33 4.158em);
+  place-self: start;
+  margin-top: 1.54rem;
   font-size: 1.1em;
 }
 .sidebar h2 {
@@ -6795,11 +6795,19 @@ hr {
 }
 
 .blue-text {
-  color: blue;
+  color: #00f;
 }
 
 /* table styling */
 table {
+  border: solid 2px #8f4c19;
+  border-radius: 1.54em;
+  box-shadow: 2px 2px 5px #333;
+  background: linear-gradient(to bottom, #ba6321 2.079em, #db7c33 2.079em);
+  padding-left: 0.462em;
+  padding-right: 0.462em;
+  padding-top: 0.3696em;
+  padding-bottom: 0.4158em;
   width: 100%;
   table-layout: fixed;
   margin-bottom: 1.54em;
@@ -6807,16 +6815,16 @@ table {
 
 /* teknologi-sidans styling */
 .tech-box {
-  display: block;
-  border: solid 3px #8f4c19;
-  border-radius: 1.54em;
-  box-shadow: 2px 2px 5px #333;
   padding-left: 1.54em;
   padding-right: 1.54em;
   padding-top: 1.232em;
   padding-bottom: 1.386em;
   box-shadow: 2px 2px 5px #333;
   background: linear-gradient(to bottom, #ba6321 4.774em, #db7c33 4.774em);
+  display: block;
+  border: solid 3px #8f4c19;
+  border-radius: 1.54em;
+  box-shadow: 2px 2px 5px #333;
 }
 .tech-box * {
   color: #000;

@@ -26,18 +26,21 @@ $magic-number-rem: $base-line-height * $base-font-size-rem;
 @mixin box-background($height) {
     box-shadow: 2px 2px 5px #333;
 
-    background: linear-gradient(
-        to bottom,
-        $accent-colour $magic-number * $height,
-        $accent-colour-l $magic-number * $height,
-    );
+    background: linear-gradient(to bottom,
+$accent-colour $magic-number * $height,
+$accent-colour-l $magic-number * $height);
 }
 
-@mixin box-padding {
+@mixin box-padding($padding) {
     padding: {
-        left: $magic-number;
-        right: $magic-number;
-        top: $magic-number * 0.8;
-        bottom: $magic-number * 0.9;
+        left: $padding;
+        right: $padding;
+        top: $padding * 0.8;
+        bottom: $padding * 0.9;
     }
+}
+
+@mixin box-border($border-radius) {
+    border: solid 2px $accent-colour-d;
+    border-radius: $border-radius;
 }
