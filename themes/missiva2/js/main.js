@@ -1,12 +1,15 @@
-// document.getElementsByClassName("logo")[0].children[0].className = "fa fa-home"
-// document.getElementsByClassName("logo")[0].children[0].className = "fa fa-bug"
-// document.getElementsByClassName("logo")[0].children[0].className = "fa fa-file-text"
-// document.getElementsByClassName("logo")[0].children[0].className = "fa fa-puzzle-piece"
-
 (function () {
     const navLinks = document.getElementsByClassName("nav")[0].getElementsByTagName("a");
-    const pageIcon = document.getElementsByClassName("nav")[0].getElementsByClassName("active")[0].getAttribute("data-icon");
+    let pageIcon = navLinks[0].getAttribute("data-icon");
     const icon = document.getElementsByClassName("logo")[0].children[0];
+
+    document.querySelectorAll(".nav > a").forEach(function (page) {
+        const path = window.location.pathname.split('/');
+        const link = page.href.split('/').at(-1);
+        if (path.indexOf(link) > 0) {
+            pageIcon = page.getAttribute("data-icon");
+        }
+    });
 
     for (let i = 0; i < navLinks.length; i++) {
         navLinks[i].addEventListener("mouseenter", function() {
@@ -18,4 +21,6 @@
             icon.className = pageIcon;
         })
     }
+
+
 })()

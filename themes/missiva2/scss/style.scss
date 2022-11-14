@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use 'sass:color';
 @import '../../node_modules/normalize.css/normalize';
 
 @import 'variables';
@@ -60,10 +61,30 @@ p {
     margin-bottom: $magic-number;
 }
 
-@media (min-width: 64em) {
+p:first-child {
+    margin-top: $magic-number;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 767px) {
     html {
         font-size: 112.5%;
     }
+}
+
+.hidden {
+    display: none !important;
+}
+
+hr {
+    width: math.percentage(math.div(3, 4));
+    height: 2px;
+    border-width: 0;
+    background-color: #000;
+    margin-bottom: $magic-number;
 }
 
 /* header and footer styling */
@@ -75,10 +96,13 @@ p {
 }
 
 .logo {
-    font-size: 5rem;
-    padding: 0 2rem 0 1rem;
-    width: 5rem;
-    text-align: center;
+    padding-left: 0.3rem;
+}
+
+.title {
+    * {
+        margin: 0;
+    }
 }
 
 .footer {
@@ -100,34 +124,63 @@ p {
 /* navigation bar styling */
 
 .nav {
-    a:hover,
-    ul *:hover {
-        background-color: $theme-colour-l;
-        // color: $theme-colour;
+    h4 {
+        margin: 0;
     }
 
     a {
-        padding: 0.5rem;
-        border-radius: 0.5rem;
-        margin: 0.2rem;
+        padding: $magic-number-rem * 0.3 $magic-number-rem * 0.6;
+        border-radius: 0.7rem;
+        border: 2px solid #00000000;
+        text-decoration: none;
+    }
+
+    a:hover {
+        background-color: $theme-colour-l;
     }
 
     .active {
         background-color: $theme-colour;
     }
+
+    a:hover,
+    .active {
+        border: 2px solid #555;
+        box-shadow: 1px 1px 3px #333;
+    }
+}
+
+/* sidebar styling */
+
+.sidebar {
+    place-self: start;
+    margin-top: $magic-number-rem;
+
+    border: solid 2px $accent-colour-d;
+    border-radius: $magic-number;
+
+    @include box-padding;
+    @include box-background(2.7);
+
+    font-size: $base-font-size;
+
+    h2 {
+        margin-top: 0;
+    }
+
+    * {
+        color: #000;
+    }
 }
 
 /* content styling */
 
-hr {
-    width: math.percentage(math.div(3, 4));
-    // border: none;
-    // border-top: 1px solid $accent-colour;
-    height: 2px;
-    border-width: 0;
-    // color: black;
-    background-color: #000;
-    margin-bottom: $magic-number;
+.content-small {
+    text-align: justify;
+}
+
+.blue-text {
+    color: blue;
 }
 
 /* table styling */
@@ -136,4 +189,25 @@ table {
     width: 100%;
     table-layout: fixed;
     margin-bottom: $magic-number;
+}
+
+/* teknologi-sidans styling */
+
+.tech-box {
+    display: block;
+    border: solid 3px $accent-colour-d;
+    border-radius: $magic-number;
+    box-shadow: 2px 2px 5px #333;
+
+    @include box-padding;
+    @include box-background(3.1);
+
+    * {
+        color: #000;
+        margin: 0;
+    }
+
+    *:not(:last-child) {
+        margin-bottom: $magic-number;
+    }
 }

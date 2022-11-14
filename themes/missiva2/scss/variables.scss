@@ -1,14 +1,43 @@
 $font-color: #474747;
 $font-alternative-color: #ddd;
-$theme-colour: #0bd4d4;
-$theme-colour-l: #26ffff;
+$theme-colour: #1acfcf;
+$theme-colour-l: #27efef;
+// $theme-colour-l: #26ffff;
 $theme-colour-d: #038787;
-$accent-colour: #d4550b;
-$accent-colour-d: #873200;
+// $accent-colour: complement($theme-colour);
+// $accent-colour-d: complement($theme-colour-d);
+// $accent-colour: #d4550b;
+// $accent-colour-d: #873200;
+// $accent-colour: #ca7331;
+$accent-colour-l: #db7c33;
+$accent-colour: darken($accent-colour-l, 10%);
+$accent-colour-d: darken($accent-colour-l, 20%);
+// $accent-colour-d: #89583b;
 
 $main-width: 960px;
 $main-width-min: 480px;
 
 $base-line-height: 1.4;
 $base-font-size: 1.1em;
+$base-font-size-rem: 1.1rem;
 $magic-number: $base-line-height * $base-font-size;
+$magic-number-rem: $base-line-height * $base-font-size-rem;
+
+@mixin box-background($height) {
+    box-shadow: 2px 2px 5px #333;
+
+    background: linear-gradient(
+        to bottom,
+        $accent-colour $magic-number * $height,
+        $accent-colour-l $magic-number * $height,
+    );
+}
+
+@mixin box-padding {
+    padding: {
+        left: $magic-number;
+        right: $magic-number;
+        top: $magic-number * 0.8;
+        bottom: $magic-number * 0.9;
+    }
+}

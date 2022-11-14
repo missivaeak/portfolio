@@ -15,7 +15,7 @@ function main()
     document.documentElement.className = 'js';
 
     // wrap tables
-    var tables = document.querySelectorAll('#main > .container > table');
+    var tables = document.querySelectorAll('.main > table');
     for (var i = 0; i < tables.length; i++) {
         if (!/\btable-responsive\b/.test(tables[i].parentElement.className)) {
             var tableWrapper = document.createElement('div');

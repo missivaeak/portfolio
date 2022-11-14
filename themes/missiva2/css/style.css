@@ -321,17 +321,17 @@ code {
   padding: 0.1em 0.2em;
   border: 1px solid #ccc;
   border-radius: 0.3em;
-  background: #f5f5f5;
+  background: rgba(245, 245, 245, 0.9607843137);
   font-family: monospace;
-  font-size: 0.85rem;
-  line-height: 1.9824;
+  font-size: 1.1em;
+  line-height: 1.4;
 }
 
 pre {
   padding: 0 1em;
   border: 1px solid #ccc;
   border-radius: 0.3em;
-  background: #f5f5f5;
+  background: rgba(245, 245, 245, 0.9607843137);
 }
 
 pre code {
@@ -345,70 +345,70 @@ pre code {
 }
 
 /* main layout, centered grid */
-.grid {
+.body-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  grid-template-columns: 1fr minmax(480px, 960px) 1fr;
+  grid-template-rows: min-content 1fr min-content;
   display: grid;
 }
 
-.wrapper {
-  width: 100vw;
-  min-height: 100vh;
-  grid-template-columns: auto minmax(480px, 960px) auto;
-  grid-template-rows: min-content auto min-content;
-}
-
-.header-left,
-.main-left,
-.footer-left {
-  grid-column: 1/1;
-}
-
-.header,
-.main,
-.footer {
+.header {
+  grid-row: 1/1;
   grid-column: 2/2;
 }
 
-.header-right,
-.main-right,
-.footer-right {
-  grid-column: 3/3;
+.main {
+  grid-row: 2/2;
+  grid-column: 2/2;
+}
+
+.footer {
+  grid-row: 3/3;
+  grid-column: 2/2;
 }
 
 .header-left,
-.header,
-.header-right {
-  grid-row: 1/1;
-}
-
+.header-right,
 .main-left,
-.main,
-.main-right {
-  grid-row: 2/2;
-}
-
+.main-right,
 .footer-left,
-.footer,
 .footer-right {
-  grid-row: 3/3;
+  z-index: -1;
 }
 
-.hidden {
-  display: none !important;
-}
-
+/* body header */
 .header {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-basis: 0;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 7rem 7rem 1fr;
   align-items: center;
 }
 
-.logo-title {
+.logo {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 5rem;
+}
+
+.title {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.nav-toggle {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: right;
+}
+
+.nav {
+  grid-column: 3/span 1;
+  grid-row: 1;
+  gap: 0.77em;
+  justify-self: right;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-flow: row wrap;
+  justify-content: flex-end;
 }
 
 .footer {
@@ -416,11 +416,65 @@ pre code {
   justify-content: space-between;
   align-items: center;
 }
-
-.main {
-  overflow-x: hidden;
+.footer p {
+  margin: 0 !important;
 }
 
+/* landingpage 3 col grid */
+.landingpage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "header header header";
+  grid-auto-flow: dense;
+  gap: 1.54em;
+  margin-bottom: 1.54em;
+}
+
+.landingpage .landingpage-header {
+  grid-area: header;
+  margin-bottom: 0;
+}
+
+.col-span-1 {
+  grid-column: span 1;
+}
+
+.col-span-2 {
+  grid-column: span 2;
+}
+
+.col-span-3 {
+  grid-column: span 3;
+}
+
+.row-span-2 {
+  grid-row: span 2;
+}
+
+.sidebar.left {
+  grid-column: 1;
+}
+
+.content-small {
+  grid-column: 2/span 2;
+}
+
+@media (max-width: 767px) {
+  .landingpage {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header";
+  }
+  .col-span-2,
+  .col-span-3 {
+    grid-column: span 1;
+  }
+  .sidebar {
+    display: none;
+  }
+  .content-small {
+    grid-column: 1/span 3;
+  }
+}
 .slide {
   overflow-y: hidden !important;
   transition: height 0.5s ease-in !important;
@@ -441,35 +495,19 @@ pre code {
 
 .nav-toggle {
   display: none;
-  height: 100%;
   color: #333;
 }
 
 @media (max-width: 767px) {
-  .header {
-    flex-direction: column !important;
-  }
-  .header-left {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  .nav ul {
-    flex-direction: column;
-    padding-bottom: 1em;
-  }
-  .nav ul li {
-    display: flex;
-    flex-direction: column;
+  .nav {
+    grid-column: 1/span 3;
+    grid-row: 2;
+    justify-self: center;
+    flex-flow: column nowrap;
     text-align: center;
-  }
-  .nav ul li a {
-    display: block;
-    padding: 0.5em 0;
   }
   .js .nav-toggle {
     display: block;
-    float: right;
     width: 2em;
     margin: 0.6667em;
     font-size: 1.5rem;
@@ -6617,7 +6655,7 @@ readers do not read off random characters that represent icons */
 
 /* body styling */
 body {
-  background-color: #0bd4d4;
+  background-color: #1acfcf;
 }
 
 .header-left,
@@ -6656,21 +6694,42 @@ p {
   margin-bottom: 1.54em;
 }
 
-@media (min-width: 64em) {
+p:first-child {
+  margin-top: 1.54em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 767px) {
   html {
     font-size: 112.5%;
   }
 }
+.hidden {
+  display: none !important;
+}
+
+hr {
+  width: 75%;
+  height: 2px;
+  border-width: 0;
+  background-color: #000;
+  margin-bottom: 1.54em;
+}
+
 /* header and footer styling */
 .header * {
   color: #000;
 }
 
 .logo {
-  font-size: 5rem;
-  padding: 0 2rem 0 1rem;
-  width: 5rem;
-  text-align: center;
+  padding-left: 0.3rem;
+}
+
+.title * {
+  margin: 0;
 }
 
 .footer {
@@ -6688,31 +6747,81 @@ p {
 }
 
 /* navigation bar styling */
-.nav a:hover,
-.nav ul *:hover {
-  background-color: #26ffff;
+.nav h4 {
+  margin: 0;
 }
 .nav a {
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  margin: 0.2rem;
+  padding: 0.462rem 0.924rem;
+  border-radius: 0.7rem;
+  border: 2px solid rgba(0, 0, 0, 0);
+  text-decoration: none;
+}
+.nav a:hover {
+  background-color: #27efef;
 }
 .nav .active {
-  background-color: #0bd4d4;
+  background-color: #1acfcf;
+}
+.nav a:hover,
+.nav .active {
+  border: 2px solid #555;
+  box-shadow: 1px 1px 3px #333;
+}
+
+/* sidebar styling */
+.sidebar {
+  place-self: start;
+  margin-top: 1.54rem;
+  border: solid 2px #8f4c19;
+  border-radius: 1.54em;
+  padding-left: 1.54em;
+  padding-right: 1.54em;
+  padding-top: 1.232em;
+  padding-bottom: 1.386em;
+  box-shadow: 2px 2px 5px #333;
+  background: linear-gradient(to bottom, #ba6321 4.158em, #db7c33 4.158em);
+  font-size: 1.1em;
+}
+.sidebar h2 {
+  margin-top: 0;
+}
+.sidebar * {
+  color: #000;
 }
 
 /* content styling */
-hr {
-  width: 75%;
-  height: 2px;
-  border-width: 0;
-  background-color: #000;
-  margin-bottom: 1.54em;
+.content-small {
+  text-align: justify;
+}
+
+.blue-text {
+  color: blue;
 }
 
 /* table styling */
 table {
   width: 100%;
   table-layout: fixed;
+  margin-bottom: 1.54em;
+}
+
+/* teknologi-sidans styling */
+.tech-box {
+  display: block;
+  border: solid 3px #8f4c19;
+  border-radius: 1.54em;
+  box-shadow: 2px 2px 5px #333;
+  padding-left: 1.54em;
+  padding-right: 1.54em;
+  padding-top: 1.232em;
+  padding-bottom: 1.386em;
+  box-shadow: 2px 2px 5px #333;
+  background: linear-gradient(to bottom, #ba6321 4.774em, #db7c33 4.774em);
+}
+.tech-box * {
+  color: #000;
+  margin: 0;
+}
+.tech-box *:not(:last-child) {
   margin-bottom: 1.54em;
 }
