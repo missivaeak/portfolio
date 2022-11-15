@@ -5,6 +5,8 @@ Template: technologies
 icon: far fa-file-code
 ---
 
+<div class="landingpage-sub">
+
 <div class="sidebar left" markdown="1">
 ## Teknologier
 
@@ -31,5 +33,7 @@ Ett program som skriver ut alla jämna siffror mellan 1 och 100 kan se ut på f�
         console.log(i);
     }
 }</code></pre>
+
+</div>
 
 </div>

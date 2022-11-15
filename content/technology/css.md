@@ -5,6 +5,8 @@ Template: technologies
 icon: far fa-file-code
 ---
 
+<div class="landingpage-sub">
+
 <div class="sidebar left" markdown="1">
 ## Teknologier
 
@@ -29,5 +31,7 @@ Om vi till exempel vill sätta färgen för alla textstycken till blå gör vi p
 <pre><code class="language-css">p {
     color: blue;
 }</code></pre>
+
+</div>
 
 </div>

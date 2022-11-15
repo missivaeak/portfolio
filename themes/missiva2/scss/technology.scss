@@ -1,0 +1,46 @@
+/* teknologi-sidans styling */
+
+.tech-box {
+    @include box-padding($magic-number);
+    @include box-background(3.1);
+
+    display: block;
+    border: solid 3px $accent-colour-d;
+    border-radius: $magic-number;
+    box-shadow: 2px 2px 5px #333;
+
+    * {
+        color: #000;
+        margin: 0;
+    }
+
+    *:not(:last-child) {
+        margin-bottom: $magic-number;
+    }
+}
+
+/* sidebar styling */
+
+.sidebar {
+    @include box-border($magic-number);
+    @include box-padding($magic-number);
+    @include box-background(2.7);
+
+    margin-top: $magic-number-rem;
+    font-size: $base-font-size;
+    place-self: start;
+
+    h2 {
+        margin-top: 0;
+    }
+
+    * {
+        color: #000;
+    }
+}
+
+/* content styling */
+
+.content-small {
+    text-align: justify;
+}

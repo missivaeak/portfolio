@@ -101,8 +101,6 @@
     margin-bottom: 0;
 }
 
-
-
 .col-span-1 {
     grid-column: span 1;
 }
@@ -119,12 +117,30 @@
     grid-row: span 2;
 }
 
-.sidebar.left {
-    grid-column: 1;
+/* landingpage undersida */
+
+.landingpage-sub {
+    grid-column: span 3;
+    display: flex;
+    justify-content: flex-start;
+    gap: $magic-number;
+}
+
+.sidebar {
+    width: max-content;
+
+    .left {
+        order: 1;
+    }
+
+    .right {
+        order: 3;
+    }
 }
 
 .content-small {
-    grid-column: 2 / span 2;
+    width: auto;
+    order: 2;
 }
 
 @media (max-width: 767px) {

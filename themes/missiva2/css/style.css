@@ -450,12 +450,27 @@ pre code {
   grid-row: span 2;
 }
 
-.sidebar.left {
-  grid-column: 1;
+/* landingpage undersida */
+.landingpage-sub {
+  grid-column: span 3;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.54em;
+}
+
+.sidebar {
+  width: max-content;
+}
+.sidebar .left {
+  order: 1;
+}
+.sidebar .right {
+  order: 3;
 }
 
 .content-small {
-  grid-column: 2/span 2;
+  width: auto;
+  order: 2;
 }
 
 @media (max-width: 767px) {
@@ -515,6 +530,53 @@ pre code {
     cursor: pointer;
   }
 }
+/* teknologi-sidans styling */
+.tech-box {
+  padding-left: 1.54em;
+  padding-right: 1.54em;
+  padding-top: 1.232em;
+  padding-bottom: 1.386em;
+  box-shadow: 2px 2px 5px #333;
+  background: linear-gradient(to bottom, #ba6321 4.774em, #db7c33 4.774em);
+  display: block;
+  border: solid 3px #8f4c19;
+  border-radius: 1.54em;
+  box-shadow: 2px 2px 5px #333;
+}
+.tech-box * {
+  color: #000;
+  margin: 0;
+}
+.tech-box *:not(:last-child) {
+  margin-bottom: 1.54em;
+}
+
+/* sidebar styling */
+.sidebar {
+  border: solid 2px #8f4c19;
+  border-radius: 1.54em;
+  padding-left: 1.54em;
+  padding-right: 1.54em;
+  padding-top: 1.232em;
+  padding-bottom: 1.386em;
+  box-shadow: 2px 2px 5px #333;
+  background: linear-gradient(to bottom, #ba6321 4.158em, #db7c33 4.158em);
+  margin-top: 1.54rem;
+  font-size: 1.1em;
+  place-self: start;
+}
+.sidebar h2 {
+  margin-top: 0;
+}
+.sidebar * {
+  color: #000;
+}
+
+/* content styling */
+.content-small {
+  text-align: justify;
+}
+
 /*!
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -6767,32 +6829,6 @@ hr {
   box-shadow: 1px 1px 3px #333;
 }
 
-/* sidebar styling */
-.sidebar {
-  border: solid 2px #8f4c19;
-  border-radius: 1.54em;
-  padding-left: 1.54em;
-  padding-right: 1.54em;
-  padding-top: 1.232em;
-  padding-bottom: 1.386em;
-  box-shadow: 2px 2px 5px #333;
-  background: linear-gradient(to bottom, #ba6321 4.158em, #db7c33 4.158em);
-  place-self: start;
-  margin-top: 1.54rem;
-  font-size: 1.1em;
-}
-.sidebar h2 {
-  margin-top: 0;
-}
-.sidebar * {
-  color: #000;
-}
-
-/* content styling */
-.content-small {
-  text-align: justify;
-}
-
 /* table styling */
 table {
   border: solid 2px #8f4c19;
@@ -6805,26 +6841,5 @@ table {
   padding-bottom: 0.4158em;
   width: 100%;
   table-layout: fixed;
-  margin-bottom: 1.54em;
-}
-
-/* teknologi-sidans styling */
-.tech-box {
-  padding-left: 1.54em;
-  padding-right: 1.54em;
-  padding-top: 1.232em;
-  padding-bottom: 1.386em;
-  box-shadow: 2px 2px 5px #333;
-  background: linear-gradient(to bottom, #ba6321 4.774em, #db7c33 4.774em);
-  display: block;
-  border: solid 3px #8f4c19;
-  border-radius: 1.54em;
-  box-shadow: 2px 2px 5px #333;
-}
-.tech-box * {
-  color: #000;
-  margin: 0;
-}
-.tech-box *:not(:last-child) {
   margin-bottom: 1.54em;
 }

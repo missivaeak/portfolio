@@ -5,6 +5,8 @@ Template: technologies
 icon: far fa-file-code
 ---
 
+<div class="landingpage-sub">
+
 <div class="sidebar left" markdown="1">
 ## Teknologier
 
@@ -27,5 +29,7 @@ HTML beskriver innehåll och struktur för våra webbplatser och gör det möjli
 HTML använder sig av element beskrivna av taggar. Nedan är ett exempel på ett textstycke med en länk i:
 
 <pre><code class="language-html">&lt;p&gt;En länk till min &lt;a href="minwebbplats.html"&gt;webbplats&lt;/a&gt;&lt;/p&gt;</code></pre>
+
+</div>
 
 </div>
