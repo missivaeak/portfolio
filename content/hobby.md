@@ -1,6 +1,7 @@
 ---
 Title: Hobby
 Description: Sida om en hobby jag har
+hidden: true
 icon: fa fa-palette
 ---
 

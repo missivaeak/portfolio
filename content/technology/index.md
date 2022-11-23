@@ -1,6 +1,6 @@
 ---
 Title: Teknologier
-Description: Sida om en hobby jag har
+Description: Landingsida för beskrivning av olika teknologier sidan använder sig av
 Template: technologies
 icon: far fa-file-code
 ---

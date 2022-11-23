@@ -1,5 +1,5 @@
-$font-color: #474747;
-$font-alternative-color: #ddd;
+$font-colour: #474747;
+$font-alternative-colour: #ddd;
 $theme-colour: #1acfcf;
 $theme-colour-l: #27efef;
 // $theme-colour-l: #26ffff;
@@ -14,8 +14,16 @@ $accent-colour: darken($accent-colour-l, 10%);
 $accent-colour-d: darken($accent-colour-l, 20%);
 // $accent-colour-d: #89583b;
 
+$stark-colour: #000;
+$stark-colour-l: #333;
+$stark-alternative-colour: #e5e5e5;
+$stark-alternative-colour-d: #ccc;
+$stark-alternative-transparent: #e5e5e533;
+
+$box-shadow-colour: #333;
+
 $main-width: 960px;
-$main-width-min: 480px;
+$main-width-min: 360px;
 
 $base-line-height: 1.4;
 $base-font-size: 1.1em;
@@ -24,7 +32,7 @@ $magic-number: $base-line-height * $base-font-size;
 $magic-number-rem: $base-line-height * $base-font-size-rem;
 
 @mixin box-background($height) {
-    box-shadow: 2px 2px 5px #333;
+    box-shadow: 2px 2px 5px $box-shadow-colour;
 
     background: linear-gradient(to bottom,
 $accent-colour $magic-number * $height,
@@ -43,4 +51,13 @@ $accent-colour-l $magic-number * $height);
 @mixin box-border($border-radius) {
     border: solid 2px $accent-colour-d;
     border-radius: $border-radius;
+}
+
+
+@mixin table-background($height) {
+    box-shadow: 2px 2px 5px $box-shadow-colour;
+
+    background: linear-gradient(to bottom,
+$theme-colour-d $magic-number * $height,
+color.scale($theme-colour, $lightness: -10%) $magic-number * $height);
 }

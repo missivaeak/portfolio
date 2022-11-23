@@ -1,9 +1,11 @@
 ---
-Title: Hobby
-Description: Sida om en hobby jag har
-hidden: true
-icon: fa fa-palette
+Title: Designprinciper
+Description: Analysuppgift om designuppgifter
+Template: technologies
+icon: fa fa-microscope
 ---
+
+<div class="content-full" markdown="1">
 
 Titel på rapporten
 =======================
@@ -39,3 +41,5 @@ Ange de eventuella referenser du använder dig av, om några.
 -----------------------
 
 Skriv ditt eget namn samt vilka gruppmedlemmar som deltog i att författa rapporten.
+
+</div>

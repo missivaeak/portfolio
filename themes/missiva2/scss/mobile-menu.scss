@@ -16,14 +16,14 @@
     }
 
     a {
-        color: #333;
+        color: $stark-colour-l;
     }
 }
 
 .nav-toggle {
     display: none;
     // height: 100%;
-    color: #333;
+    color: $stark-colour-l;
 }
 
 @media (max-width: 767px) {

@@ -1,0 +1,27 @@
+$font-colour: #b7b7b7;
+$font-alternative-colour: #333;
+$theme-colour: #1d3332;
+$theme-colour-l: #365e5c;
+// $theme-colour-l: #26ffff;
+$theme-colour-d: #0d1616;
+// $accent-colour: complement($theme-colour);
+// $accent-colour-d: complement($theme-colour-d);
+// $accent-colour: #d4550b;
+// $accent-colour-d: #873200;
+// $accent-colour: #ca7331;
+$accent-colour-l: #7e471e;
+$accent-colour: darken($accent-colour-l, 10%);
+$accent-colour-d: darken($accent-colour-l, 20%);
+// $accent-colour-d: #89583b;
+
+$stark-colour: #a8a8a8;
+$stark-colour-l: #b7b7b7;
+$stark-alternative-colour: #333;
+$stark-alternative-colour-d: #000;
+$stark-alternative-transparent: #3333;
+
+$box-shadow-colour: #000;
+
+img {
+    filter: brightness(0.9);
+}

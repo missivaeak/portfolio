@@ -1,0 +1,158 @@
+/* body styling */
+
+html {
+    font-size: 100%;
+    overflow-y: scroll;
+}
+
+@media (min-width: 767px) {
+    html {
+        font-size: 112.5%;
+    }
+}
+
+body {
+    background-color: $theme-colour;
+    line-height: $base-line-height;
+}
+
+.header-left,
+.header,
+.header-right,
+.footer-left,
+.footer,
+.footer-right {
+    background-color: $theme-colour-d;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* content elements */
+
+* {
+    color: $font-colour;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Nunito', sans-serif;
+}
+
+p {
+    font-size: $base-font-size;
+    margin-bottom: $magic-number;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+hr {
+    width: math.percentage(math.div(3, 4));
+    height: 2px;
+    border-width: 0;
+    background-color: $stark-colour;
+    margin-bottom: $magic-number;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* header and footer styling */
+
+.header {
+    * {
+        color: $stark-colour;
+    }
+}
+
+.logo {
+    padding-left: 0.3rem;
+}
+
+.title {
+    * {
+        margin: 0;
+    }
+}
+
+.footer {
+    a {
+        text-decoration: none;
+    }
+
+    * {
+        margin: auto 0;
+        color: $stark-colour;
+    }
+}
+
+.social {
+    font-size: $base-font-size * 2;
+}
+
+/* navigation bar styling */
+
+.nav {
+    h4 {
+        margin: 0;
+    }
+
+    a {
+        padding: $magic-number-rem * 0.3 $magic-number-rem * 0.6;
+        border-radius: 0.7rem;
+        text-decoration: none;
+    }
+
+    a:hover {
+        background-color: $theme-colour-l;
+    }
+
+    .active {
+        background-color: $theme-colour;
+    }
+
+    a:hover,
+    .active {
+        outline: 2px solid $stark-colour;
+        box-shadow: 1px 1px 3px $box-shadow-colour;
+    }
+}
+
+/* table styling */
+
+table {
+    // @include box-border($magic-number);
+    @include table-background(2.1);
+    @include box-padding($magic-number * 0.3);
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: $magic-number;
+    justify-self: start;
+
+    border-spacing: $magic-number * 0.4;
+
+    th {
+        color: $stark-colour;
+        padding-bottom: $magic-number * 0.5;
+        white-space: pre;
+        overflow-x: hidden;
+        // line-height: $base-line-height * 1.5;
+    }
+
+    td {
+        vertical-align: top;
+    }
+
+    p {
+        margin-top: 0;
+    }
+}

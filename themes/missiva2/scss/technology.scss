@@ -7,10 +7,10 @@
     display: block;
     border: solid 3px $accent-colour-d;
     border-radius: $magic-number;
-    box-shadow: 2px 2px 5px #333;
+    box-shadow: 2px 2px 5px $box-shadow-colour;
 
     * {
-        color: #000;
+        color: $stark-colour-l;
         margin: 0;
     }
 
@@ -35,7 +35,7 @@
     }
 
     * {
-        color: #000;
+        color: $stark-colour-l;
     }
 }
 

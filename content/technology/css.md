@@ -1,6 +1,6 @@
 ---
 Title: Teknologier
-Description: Sida om en hobby jag har
+Description: Om CSS
 Template: technologies
 icon: far fa-file-code
 ---

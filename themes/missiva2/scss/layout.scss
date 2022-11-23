@@ -143,6 +143,10 @@
     order: 2;
 }
 
+.content-full {
+    grid-column: span 3;
+}
+
 @media (max-width: 767px) {
     .landingpage {
         grid-template-columns: 1fr;
