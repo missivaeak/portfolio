@@ -54,6 +54,8 @@ Analys
 
 Alla tre sidorna har väldigt skilda resultat i laddningstider men de har gemensamt att de är alla har markant sämre resultat på mobilenheter i PageSpeed Insights tester. Alla sidorna kan förbättras genom optimering av JavaScript, både mängd, komplexitet och hur de laddas. Det var också vanligt att ha många resurser att ladda in något som kan avhjälpas med hjälp av lazy loading, framförallt på Willys och Mathems sidor som laddar mycket *below the fold*.
 
+Sammantaget är Ica den snabbaste sidan och Willys den långsamast i urvalet. I min mening går gränsen för en *långsam* sida runt en sekund. Med denna måttstocken så lever enbart Ica upp till kravet, men Mathem börjar visa sin innehåll lite innan det är helt klart så det upplevs som snabb nog.
+
 Övrigt
 -----------------------
 
