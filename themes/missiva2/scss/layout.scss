@@ -1,5 +1,9 @@
 /* main layout, centered grid */
 
+* {
+    box-sizing: border-box;
+}
+
 .body-wrapper {
     width: 100%;
     min-height: 100vh;
@@ -145,6 +149,7 @@
 
 .content-full {
     grid-column: span 3;
+    text-align: justify;
 }
 
 @media (max-width: 767px) {

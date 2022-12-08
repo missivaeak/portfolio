@@ -22,5 +22,5 @@ Analys av laddningstider hos tre onlinematvarubutiker.
 <div class="tech-box col-span-3" markdown="1">
 ## [Designprinciper](analysis/03_design_principles)
 
-...
+Analys av designprinciper hos tre personsidor, samt denna sidan.
 </div>
